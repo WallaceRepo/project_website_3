@@ -1,0 +1,313 @@
+ul, menu, dir {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+/*Icons*/
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Windows Chrome ugly fix http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363#14345363 */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'icomoon';
+		src: url('../fonts/icomoon.svg#icomoon') format('svg');
+	};
+}
+
+.icon-stats-dots, .icon-sun, .icon-display, .icon-paste, .icon-meter, .icon-key {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	
+}
+
+.icon-stats-dots:before {
+	content: "\e99b";
+}
+
+.icon-sun:before {
+	content: "\e9d4";
+}
+
+.icon-display:before {
+	content: "\e956";
+}
+
+.icon-paste:before {
+	content: "\e92d";
+}
+
+.icon-meter:before {
+	content: "\e9a6";
+}
+.icon-key:before {
+  content: "\e900";
+}
+
+a, li, a:hover, li:hover {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	text-decoration: none;
+	
+}
+/* Global CSS that are applied for all screen sizes */
+.og-grid {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.7em;
+	font-weight: 300;
+	text-align: center;
+	font-size: 0px;
+	height: auto;
+}
+div.gre {
+	position: relative;
+
+}
+div.exptype, div.exp {
+	top:0px;
+	left:0;
+	overflow: hidden;
+	display: block;
+	width:100%;
+}
+div.exp {
+	z-index: 888;
+	position: absolute;
+	background-color: #fff;
+	/* height: 100%;  Check later to auto or something */
+    display: none;
+}
+div.exp a {
+	display: block;
+	padding-bottom: 2px;
+	font-weight: 300;
+	color: #333;
+	font-size: 0.8em;
+	-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-ms-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+    text-decoration: none;
+}
+div.exp a:nth-child(2n+1){
+	background: #f8f8f8;
+}
+div.exp a:hover {
+	background: #002868;
+	color: #fff;
+    text-decoration: none;
+}
+div.bar {
+	padding-bottom: 20px;
+	display: block;
+    height: auto;
+    width: 100%; /*Added*/
+	
+}
+.og-grid li span {
+	display: block;
+	color: #fff;
+}
+.og-grid li.og-expanded div.gre::after {
+	top:auto;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #f9f9f9;
+	border-width: 18px;
+	left: 50%;
+	margin: -30px 0 0 -15px;
+}
+/* Transforms the list into a horizontal navigation */
+	.og-grid li, .navc li {
+		/*float: left;*/
+		background: #303030;
+		text-align: center;
+		-webkit-transition: border .5s;
+		-moz-transition: border .5s;
+		-o-transition: border .5s;
+		-ms-transition: border .5s;
+		transition: border .5s;
+		display: inline-block;
+		border-left: 1px solid #666;
+		font-size:24px;
+		
+	}
+	
+	.og-grid li {
+		 width: 20%;
+		 
+	}
+	 .og-grid li > a {
+	display: block;
+	text-decoration: none;
+	-webkit-transition: color .5s, background .5s, height .5s;
+	-moz-transition: color .5s, background .5s, height .5s;
+	-o-transition: color .5s, background .5s, height .5s;
+	-ms-transition: color .5s, background .5s, height .5s;
+	transition: color .5s, background .5s, height .5s;
+	position:relative;
+	
+}
+.og-grid i, .navc i {
+		position: relative;
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0.6em;
+		border-radius: 50%;
+		font-size: 1.4em;
+		box-shadow: 0 0 0 30px transparent;
+		background: rgba(255,255,255,0.1);
+		-webkit-transition: box-shadow .6s ease-in-out;
+		-moz-transition: box-shadow .6s ease-in-out;
+		-o-transition: box-shadow .6s ease-in-out;
+		-ms-transition: box-shadow .6s ease-in-out;
+		transition: box-shadow .6s ease-in-out;
+		/* Make the font smoother for Chrome */
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+    }	    
+/* Remove the blue Webkit background when element is tapped */
+a, button {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Hover effect for the whole navigation to make the hovered item stand out */
+
+.no-touch *.og-grid li:hover a, .navc ul:hover a {
+	color:#fff;
+}
+
+.no-touch .og-grid li:hover a:hover,.navc ul:hover a {
+	color: #fff;
+	
+} 
+.og-grid li:hover, .navc li:hover {
+	background: #444;
+}
+	/* Placing the icon */
+	.icon {
+		padding-top: 1.2em;
+    }
+	.icon + span {
+		margin-top: 1.1em;
+		-webkit-transition: margin .5s;
+		-moz-transition: margin .5s;
+		-o-transition: margin .5s;
+		-ms-transition: margin .5s;
+		transition: margin .5s;
+		margin-bottom: 1em;
+		font-size: 0.8em;
+	}
+	/* Positioning the icons and preparing for the animation*/
+	/* Animate the box-shadow to create the effect */
+	/*.no-touch*/ .og-grid li:hover i,
+	/*.no-touch*/ .og-grid li:active i,
+	/*.no-touch */.og-grid li:focus i,
+	/*.no-touch*/ .navc li:hover i,
+	/*.no-touch*/ .navc li:active i,
+	/*.no-touch */.navc li:focus i {		
+		box-shadow: 0 0 0 0 rgba(255,255,255,0.2);
+		-webkit-transition: box-shadow .4s ease-in-out;
+		-moz-transition: box-shadow .4s ease-in-out;
+		-o-transition: box-shadow .4s ease-in-out;
+		-ms-transition: box-shadow .4s ease-in-out;
+		transition: box-shadow .4s ease-in-out;
+	}
+		
+
+@media (max-width:448px) {
+	.og-grid li, .navc li {
+		width:50%;
+		border-bottom: 1px solid #666;
+		font-size: 18px;
+	}
+	
+}
+
+@media (min-width:449px) and (max-width:600px) {
+	.og-grid li, .navc li {
+		border-bottom: 1px solid #666;
+		font-size: 18px;
+		float:left;
+
+	}
+	
+	.og-grid li {
+		width:20%
+	}
+	.og-grid i, .navc i {
+		padding: 0.6em;
+		border-radius: 50%;
+		font-size: 1.2em;
+	}
+	.icon {
+		padding-top: 1em;
+	}
+	.icon + span {
+		margin-top: 1.2em;
+		-webkit-transition: margin .5s;
+		-moz-transition: margin .5s;
+		-o-transition: margin .5s;
+		-ms-transition: margin .5s;
+		transition: margin .5s;
+		margin-bottom: 1.8em;
+		font-size:0.6em;
+	}
+}
+@media (min-width:601px) and (max-width:970px) {
+	.og-grid li, .navc li {
+		border-bottom: 1px solid #666;
+		font-size: 18px;
+		float:left;
+
+	}
+	
+	.og-grid li {
+		width:20%
+	}
+	.og-grid i, .navc i {
+		padding: 0.6em;
+		border-radius: 50%;
+		font-size: 1.2em;
+	}
+	.icon {
+		padding-top: 1em;
+	}
+	.icon + span {
+		margin-top: 1.2em;
+		-webkit-transition: margin .5s;
+		-moz-transition: margin .5s;
+		-o-transition: margin .5s;
+		-ms-transition: margin .5s;
+		transition: margin .5s;
+		margin-bottom: 1.8em;
+		font-size:0.6em;
+	}
+}
